@@ -1,0 +1,21 @@
+#collection-template {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    transition: 1s;
+
+}
+
+#collection-template img {
+    height: 100px;
+    width: 100px;
+    margin: -5px;
+    transition: 1s;
+}
+
+#collection-template img:hover {
+    filter: grayscale(100px);
+    transform: scale(1.1);
+}
