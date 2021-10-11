@@ -44,10 +44,11 @@ nav {
 }
 
 
-.connect-wallet {
+#mintbtn{
     border-style: none;
     background-color: rgb(65, 224, 16);
      color: black;
+     width: 70px;
     padding: 10px;
     margin-right: 7px;
     border-radius: 5px;
@@ -55,6 +56,8 @@ nav {
     font-weight: 500;
     transition: background-color .5s ease;
 }
+
+
 
 #mintbtn:hover {
     color: black;
@@ -354,6 +357,37 @@ color: rgb(65, 224, 16);
     justify-content: center;
     color: rgb(65, 224, 16) !important;
 
+}
+
+.mint-section{
+    width: 100vw;
+    height: 100vh;
+    background-color: #292b2c;
+    background-image: url(/stellar\ saurins.jpg);
+    background-size: 1600px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.connect-wallet{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%);
+    border-style: none;
+    background-color: rgb(65, 224, 16);
+     color: black;
+    padding: 10px;
+    margin-right: 7px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 500;
+    transition: all .5s ease;
+}
+
+.connect-wallet:active,
+.connect-wallet:hover {
+    color: white;
 }
 
 @media (max-width: 1200px) {
