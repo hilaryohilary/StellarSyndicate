@@ -20,8 +20,9 @@
     </script>
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/timeline.css">
 </head>
-<body>
+<body class="bg-dark">
 
     <div class="bg-dark" id="logo-animation">
       <img src="svg/stellarsaurin.png" alt="">
@@ -46,7 +47,7 @@
                 <div class="offcanvas-body bg-dark">
                   <ul class="navbar-nav     navbar-dark justify-content-end flex-grow-1 pe-3">
                     <li class="nav-item">
-                      <a class="nav-link" href="minttoken.html" id="mintbtn">MINT</a>
+                      <a class="nav-link" href="./mint/index.html" id="mintbtn">MINT</a>
                     </li>  
                     <li class="nav-item">
                       <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
@@ -55,15 +56,15 @@
                       <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         GALLERY
                       </a>
-                      <ul class="dropdown-menu" id="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
-                        <li><a href="gallery.html" class="dropdown-item" id="stellarsyndicatenfts">StellarSyndicateNFTs</a></li>
+                      <ul class="dropdown-menu dropdown-menu-dark" id="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                        <li><a href="gallery.html" class="dropdown-item" id="stellarsyndicatenfts">The Splexians</a></li>
                       </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                           MARKETPLACE
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="offcanvasNavbarDropdown">
                           <li><a class="dropdown-item" id="digitaleyes">Digitaleyes</a></li>
                           <li>
                             <hr class="dropdown-divider">
@@ -91,130 +92,98 @@
           
         <!-- header ends-->
         <!-- Info section begins-->
-        <div id="fullpage">
-          <section id="info" class="container-fluid">
-            <div id="info-img-slides" class="carousel slide" data-bs-ride="carousel" >
-              <div class="carousel-indicators" id="carousel-btn">
-                <button  type="button" data-bs-target="#info-img-slides" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#info-img-slides" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#info-img-slides" data-bs-slide-to="2" aria-label="Slide 3"></button>
-              </div>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="./alien1.jpg"  class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="./alien2.jpg"  class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="./alien3.jpg" class="d-block w-100" alt="...">
-                </div>
-              </div>
-            </div>
-        <!-- Info section closses-->
-          </section>
-
-          <div id="explore">
-            <a href="#collection-sum" class="btn btn-white mt-2 pd-2" id="explore-btn" > EXPLORE</a>
-          </div> 
-        </div>    
+        <div id="fullpage"> 
+          <h1 id="up">Welcome</h1>
+          <h1 id="jstshow">Home</h1>
+        </div>
             <!-- collection sum begins-->
-          <section id="collection-sum" class="container row" style="margin-bottom: 50px;">
-            <a href="gallery.html" id="collection-link">
-              <div class="card bg-dark h-100" id = "collections" width="200px" height="400px" style="border-radius: 15px;">
-                <img src="B0Sr.gif" class="card-img-top" style= "margin-bottom: 20px; border-radius:10px; height: 250px" width="250px" alt="...">
-                <h1 class="card-title" style="font-weight: 600" id="card-title">Liquid Metal</h1>
-                <div class="card-body">
-                    <img src="svg/Binance-BNB-Icon-Logo.wine.svg" class="card-text" style="padding-bottom: 5px" width="30px" height="30px">
-                    <p class="card-text">Super Hero Move</p>
-                </div>
-              </div>
-             </a>
 
-             <a href="#" id="collection-link">
-              <div class="card bg-dark h-100" id = "collections" width="200px" height="400px" style="border-radius: 15px;">
-                <img src="66.gif" class="card-img-top" style= "margin-bottom: 20px; border-radius:10px; height: 250px" width="250px" alt="...">
-                <h1 class="card-title" style="font-weight: 600" id="card-title">19th Century</h1>
-                <div class="card-body">
-                    <img src="svg/solana.png" class="card-text" !important'" style="padding-bottom: 5px" width="30px" height="30px">
-                    <p class="card-text">Coming Soon...</p>
-                </div>
-              </div>
-             </a> 
-          </section> 
+            <section id="colsection">
+              <h3 id="collection-name">COLLECTIONS</h3>
+              <section id="collection-sum" class="container row" style="margin-bottom: 50px;">
+                <a href="gallery.html" id="collection-link">
+                  <div class="card" id = "collections">
+                    <img src="B0Sr.gif" class="card-img-top" style= "margin-bottom: 20px; border-radius:10px; height: 250px" width="250px" alt="...">
+                    <h1 class="card-title" style="font-weight: 600" id="card-title"> The Splexians</h1>
+                    <div class="card-body">
+                        <img src="svg/solana.png" class="card-text" style="padding-bottom: 5px" width="30px" height="30px">
+                        <p class="card-text"> The big move</p>
+                    </div>
+                  </div>
+                 </a>
+    
+                 <a href="#" id="collection-link">
+                  <div class="card" id = "collections">
+                    <img src="66.gif" class="card-img-top" style= "margin-bottom: 20px; border-radius:10px; height: 250px" width="250px" alt="...">
+                    <h1 class="card-title" style="font-weight: 600" id="card-title">The Uvians</h1>
+                    <div class="card-body">
+                        <img src="svg/solana.png" class="card-text" !important'" style="padding-bottom: 5px" width="30px" height="30px">
+                        <p class="card-text">Coming Soon...</p>
+                    </div>
+                  </div>
+                 </a> 
+    
+                 <a href="#" id="collection-link">
+                  <div class="card" id = "collections">
+                    <img src="variant1.jpg" class="card-img-top" style= "margin-bottom: 20px; border-radius:10px; height: 250px" width="250px" alt="...">
+                    <h1 class="card-title" style="font-weight: 600" id="card-title">The Hirocans</h1>
+                    <div class="card-body">
+                        <img src="svg/solana.png" class="card-text" !important'" style="padding-bottom: 5px" width="30px" height="30px">
+                        <p class="card-text">Coming Soon...</p>
+                    </div>
+                  </div>
+                 </a> 
+              </section> 
+            </section>
+
          <!-- collection sum ends-->       
 
           <section class="bg-dark reveal" id="introduction" style="color: #ffffff;border-radius: 10px; padding: 2rem;">
 
             <section id="our-story">
-              <p class="side">In the Black Eye Galaxy about 2.5 million lightyears away from the Milkyway. Laid the planet - Cilion, home planet to the Hirocans, Splexians and Uvians.</p>
+
+              <h3>OUR STORY</h3>
+              <p class="side">The Black Eye Galaxy millions of light years away from the Milky Way had been in perfect harmony until a certain mafia got banded - the STELLAR SYNDICATE.</p>
             <p class="side">
-              The planet Cilion was ruled in harmony by the Cilic federation until they were overthrown by the notorious Stellar Syndicate - a mafia made up of the most scum beings in the Planet ranked by their species, the Hirocans over the Splexians over the Uvians. 
+              Made up of the worst species in the galaxy, they wreaked havoc all through the galaxy until the Galactic Liberation Force (GLF) was formed against them.
             </p>
             <p class="side">
-              The Stellar Syndicate was led by the then invisible Berfolil, a Hirocan thus the ranking system he created to elevate his kind. The mafia and all of Cilion lived by the rules set by Berfolil for 12 Millennia.
+              After 12 millienia of hunting down the Stellar Syndicate, the GLF purged the galaxy of these bandits and placed a STELLAR BOUNTY on the extant scoundrels of the syndicate left.
             </p>  
             <p class="side">
-              Until this Utopia went sour and Uvian kind got highly discriminated against and sought emancipation. The Syndicate wouldn't allow that, the Uvians then had an alliance with the lower class of the Splexian kind and led a revolution. The revolution ended up with the defeat of Berfolil and untimely demise of the planet Cilion.
+              The current dire situation had the last three surviving species of the Stellar Syndicate - the Hirocans, Splexians and Uvians evacuate into our metaverse. 
             </p>
             <p class="side">
-              Now the once great and currently divided Stellar Syndicate need a new home and have set out into the Metaverse to find one. The Metaverse is in Danger.
+              The Metaverse is now in danger of the Stellar Syndicate’s criminal ways. These rogue thugs need to be apprehended and the bounty on their heads claimed.
             </p>
-            <p class="side" style="font-weight: 800;">
-              Capture all stellar syndicates.
-              All Stellar syndicate holders are known as 
-              ‘THE PROTECTORS’.
-              This is war against the Hirocans, Splexians and Uvians.
+            <p class="side">
+              All Stellar syndicate holders are called  <span style="font-weight: 800;">THE PROTECTORS</span>.
             </p>
             <p class="side" style=" font-style: italic;">
-              The future of the metaverse is in your hands...
+              Join the force Now...      
             </p>
           </section>
-            <h5>So Why Aliens?</h5>
-            <p class="reveal"> 
-              Why not? Aliens are fascinating, a myth thus a blank space in our minds filled with creative narratives. There are so many planets in the universe that should further support the existence of aliens. One fear in the research on aliens is a possible backfire if they felt threatened and invaded us. Alien invasions are fictional legends in which extraterrestrials invade the Earth either to exterminate life, enslave it, harvest people for food, steal the planet's resources or destroy the planet altogether. Thus the STELLARSYNDICATE idea was born. A rogue dangerous armed group of aliens disbanded in their home planet and set out to conquer the metaverse. The Metaverse is in danger.
-              </p>
           </section>
-          <section class="timeline container">
+          <section class="timeline">
             <div style="display: flex; justify-content: center;">
-              <h5 style="text-align: center; margin: 2rem; width: 150px; padding: 1rem; color: black; background-color:rgb(65, 224, 16); border-radius: 10px;">ROAD MAP</h5>
-            </div>
-            <div class="timeline-body">
-              <div class="timeline-item">
-                <p class="time opaque">01</p>
-                <div class="content">
-                  <p class="opaque">Drop off our collection that will be available for mint for a specified period of time</p>
-                </div>
+              <h5 style="text-align: center; margin-top: 5rem; width: 150px; padding: 1rem; color: black; background-color:rgb(65, 224, 16); border-radius: 10px;">ROAD MAP</h5>
+           </div>
+           <ul class="container">
+            <li>
+              <div>
+                <time>1934</time> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
               </div>
-              <div class="timeline-item">
-                <p class="time  opaque">02</p>
-                <div class="content">
-                  <p class="opaque">Listing on NFT marketplaces for re-sale and secondary purchase: Solanart.io, Solsea.io, digitaleyes.market</p\>
-                </div>
+            </li>
+            <li>
+              <div>
+                <time>1937</time> Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi. Suspendisse finibus mauris et bibendum molestie. Aenean ex augue, varius et pulvinar in, pretium non nisi.
               </div>
-              <div class="timeline-item">
-                <p class="time opaque">03</p>
-                <div class="content">
-                  <h5 class="title">At 50% sale</h5>
-                  <p class="opaque">We will airdrop 51 StellarSyndicate NFTs to 51 random holders</p>
-                </div>
+            </li>
+            <li>
+              <div>
+                <time>1940</time> Proin iaculis, nibh eget efficitur varius, libero tellus porta dolor, at pulvinar tortor ex eget ligula. Integer eu dapibus arcu, sit amet sollicitudin eros.
               </div>
-              <div class="timeline-item">
-                <p class="time opaque">04</p>
-                <div class="content">
-                  <h5 class="title">At 100% sale</h5>
-                  <p class="opaque"> 12% of the proceeds will be used to support a wildlife and reforestation fund. </p>
-                </div>
-              </div>
-              <div class="timeline-item">
-                <p class="time opaque">05</p>
-                <div class="content">
-                  <p class='opaque'>
-                    All actively transacting StellarSyndicate NFT holders will be awarded Potential airdrops in the future as well as exclusive membership tokens to the StellarSyndicate Society</p>
-                </div>
-              </div>
-              
-            </div>
+            </li>
           </section>
 
           <section id="faq" class="mt-4 bg-dark reveal" style="color: white; padding: 2rem;">
@@ -303,11 +272,11 @@
       
       <footer>
         <section id="socials">
-          <a href="https:\\www.twitter.com/StellarNFTs" id="twitter"><img src="./svg/twitter-black.png" alt="twitter logo"></a>
-          <a href="https:\\instagram.com/stellarsyndicatenfts" id="instagram"><img src="./svg/instagram2.jpg" id="instagram" alt="instagram"></a>
-          <a href="" id="discord"><img src="./svg/discord.jpg" alt="discord" id="discord"></a>
+          <a href="https:\\www.twitter.com/StellarNFTs" id="twitter"><img src="https://img.icons8.com/ios/50/000000/twitter-circled--v1.png"/></a>
+          <a href="https:\\instagram.com/stellarsyndicatenfts" id="instagram"><img src="https://img.icons8.com/fluency-systems-regular/48/000000/instagram-new--v2.png"/></a>
+          <a href="" id="discord"><img src="https://img.icons8.com/fluency-systems-regular/48/000000/discord-logo.png"/></a>
         </section>
-        <div id="arrow"><a href="#info-img-slides"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+        <div id="arrow"><a href="#fullpage"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
           <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
         </svg></a>
         </div>
@@ -315,6 +284,8 @@
       </footer>
     </app>
     <script src="./js/logo.js"></script>
+    <script src="./js/timeline.js"></script>
+    <script src="./js/animation.js"></script>
     <script type="text/javascript">
       window.addEventListener('scroll', reveal);
       window.addEventListener('scroll', showContent);

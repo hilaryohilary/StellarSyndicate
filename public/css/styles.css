@@ -1,7 +1,17 @@
+:root {
+    --primarycolor: #292b2c;
+    --secondarycolor: #292626;
+    --tertiarycolor: rgb(65, 224, 16);
+    --textcolor: #ffffff;
+}
+
 /* Google Fonts */;
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 
+html {
+    scroll-behavior: smooth;
+  }
 
 * {
     list-style: none;
@@ -9,7 +19,6 @@
 
 
 body {
-    background-color: #ffffff;
     overflow-x: hidden;
 }
 
@@ -23,8 +32,9 @@ app {
     display: flex;
     justify-content: center;
     align-items: center;   
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
     transform: all .5s ease;
 }
 
@@ -67,6 +77,7 @@ nav {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.3rem;
     letter-spacing: 2px;
+    animation: blinklink 5s ease-in-out infinite;
 }
 
 .nav-link {
@@ -75,13 +86,13 @@ nav {
 
 .nav-link:focus,
 .nav-link:hover {
-    color: rgb(65, 224, 16) !important;
+    color: var(--tertiarycolor) !important;
 }
 
 
 #mintbtn{
     border-style: none;
-    background-color: rgb(65, 224, 16);
+    background-color: var(--tertiarycolor);
      color: black;
      width: 70px;
     padding: 10px;
@@ -109,65 +120,101 @@ a:focus {
     transform: scale(1.05);
 }
 
-.dropdown-menu {
-    background-color: #ffffff;
-}
 
 .dropdown-menu a{
     font-weight: 500;
-}
-
-#info-img-slides img{
-    margin-top: 150px;
-    border-radius: 10px;
-    height: 300px;
-}
-
-#carousel-btn > button {
-    color: rgb(65, 224, 16) !important;
-}
-
-#explore {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    bottom: 4rem;
-    left: 20%;
-    right: 20%;
-}
-
-#explore-btn {
-    color: white;
-    background-color: #292b2c;
-    letter-spacing: 3px;
-    font-weight: 400;
-    font-size: medium;
-    text-align: center;
     transform: scale(1);
-    transition: color 1s ease;
 }
 
-#explore-btn:hover,
-#explore-btn:focus {
-color: rgb(65, 224, 16);
-}
+  #fullpage::before {
+    content: '';
+    background-image: url(../DB27D6A2-1703-4ABA-ABD4-45D91DF6B5C5.JPG);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    opacity: 0.5;
+} 
 
 #fullpage {
+    position: relative;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
+@font-face {
+    font-family: Little Alien;
+    src: url(../Little\ Alien.ttf);
+}
+#fullpage h1 {
+    font-family: Little Alien;
+    font-size: 4rem;
+    color: white;
+    z-index: 1;
+    text-align: center;
+    text-shadow: 5px 5px 12px var(--tertiarycolor);
+}
+
+#up,
+#jstshow {
+    opacity: 0;
+    transition: all 1s ease-in;
+
+}
+
+#up {
+    transform: translateY(6rem);
+}
+
+#up.active {
+    transform: translateY(2rem);
+    opacity: 1;
+}
+
+#jstshow.active {
+    opacity: 1;
+    transform: translateY(2rem);
+}
+
+
+#collection-name {
+    color: var(--textcolor);
+    text-align: center;
+    padding-top: 4rem;
+    margin-bottom: 5rem;
+    animation: blinklink 3s ease-in-out infinite;
+    animation-delay: 0.5s;
+
+}
+
+@keyframes blinklink {
+    0% {
+        text-shadow: 0px;
+    }
+
+    50% {
+        text-shadow: 5px 5px 7px var(--tertiarycolor);
+    }
+
+    100% {
+        text-shadow: 0px;
+    }
+}
 #collection-sum {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 30px;
 
-}
-
-
-
-#collection-sum > h1{
-    font-size: 1.5rem important;
 }
 
 #collection-link {
@@ -178,6 +225,22 @@ color: rgb(65, 224, 16);
     text-align: center;
     padding: 1.5rem 1.7rem;
     color: #ffffff;
+    background-color: rgb(0, 0, 0, 0.1);
+    animation: blink 3s ease-in-out infinite;
+}
+
+@keyframes blink {
+    0% {
+        box-shadow: 0px;
+    }
+
+    50% {
+        box-shadow: 2px  2px 12px var(--tertiarycolor);
+    }
+
+    100% {
+        box-shadow: 0px;
+    }
 }
 
 .card-title {
@@ -185,8 +248,7 @@ color: rgb(65, 224, 16);
     font-family: 'Anonymous Pros', monospace;
     font-size: 1.5rem;
     margin-bottom: -10px;
-    color: rgb(65, 224, 16);
-
+    color: var(--tertiarycolor);
 }
 
 .card-text {
@@ -199,15 +261,41 @@ color: rgb(65, 224, 16);
     margin-bottom: -20px;
 }
 
-#our-story{
-    font-size: 1.4rem;
-    padding: 1rem;
+#our-story {
     text-align: center;
+    position: relative;
+    padding: 1rem;
+}
 
+
+#introduction::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    background-image: url('../stellar\ saurins\ bg\ test.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat-y;
+    opacity: 0.2;
+    height: 100%;
+}
+
+
+#our-story > h3 {
+    margin-bottom: 4rem;
+    letter-spacing: 2px;
+    text-shadow: 5px 5px 7px var(--tertiarycolor);
+    position: relative;
 }
 
 #our-story .side {
+    position: relative;
     opacity: 0;
+    font-size: 1.1rem;
+    font-weight: 900;
     transition: opacity 2s ease-in-out;
     font-family: 'Anonymous Pro', monospace;
 }
@@ -217,8 +305,8 @@ color: rgb(65, 224, 16);
 }
 #introduction h5  {
     font-family:'Anonymous Pro', monospace;
-    color: white;
-    font-size: 1.4rem; 
+    color: var(--textcolor);
+    font-size: 1.2rem; 
     letter-spacing: 2px;
     padding: 2rem 0;
 }
@@ -226,104 +314,21 @@ color: rgb(65, 224, 16);
 #introduction p{
     font-family:'Anonymous Pro', monospace;
     font-size: 1.1rem;
-    letter-spacing: 2px;
-    color: rgb(65, 224, 16);
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    color: var(--tertiarycolor);    
 }
-
-.timeline {
-    max-width: 1200px;
-    margin: 3rem auto;
-    padding: 10px;
-}
-
-.timeline-body {
-    position: relative;
-    background-color: rgb(247, 245, 245) ;
-    margin-left: 50px;
-    border-radius: 0 8px 8px 0;
-    padding: 5px 0;
-    font-size: medium;
-}
-
-.timeline-body h5 {
-    font-size: 1.5rem;
-    letter-spacing: 2px;
-}
-
-.timeline p {
-    font-size: 1.2rem;
-    line-height: 1.5;
-}
-
-.timeline-body::after {
-    content: '';
-    width: 4px;
-    height: 100%;
-    background-color: rgb(65, 224, 16);
-    position: absolute;
-    left: -4px;
-    top: 0;
-}
-
-.timeline-item {
-    position: relative;
-}
-
-.timeline-item::after{
-    content: '';
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 4px solid rgb(65, 224, 16);
-    background-color: #292b2c;
-    position: absolute;
-    left: -16px;
-    top: 0px;
-    z-index: 9;
-}
-
-.time {
-    position:absolute;
-    left: -40px;
-    top: 4px;
-    opacity: .5;
-    font-weight: 400;
-}
-
-.content {
-    margin: 40px;
-    padding-bottom: 40px;
-    border-bottom: 1px dashed rgb(65, 224, 16);
-    font-weight: 500;
-    letter-spacing: 2px;
-}
-
-.opaque{
-    opacity: 0;
-    transform: translateX(-50px);
-    transition: all 1s ease-in-out;
-}
-
-.opaque.active {
-    transform: translateX(0);
-    opacity: 1;
-}
-.title {
-    font-weight: 500;
-    margin-bottom: 15px;
-}
-
 
 #faq h5  {
     font-family:'Open Sans', sans-serif;
     color: rgb(65, 224, 16);
-    font-size: 1.4rem; 
+    font-size: 1.2rem; 
     letter-spacing: 2px;
     padding: 2rem 0;
+    text-shadow: 3px 3px 7px rgb(0, 0, 0);
 }
 
 #faq p{
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-style: italic;
     letter-spacing: 2px;
 }
@@ -347,7 +352,13 @@ color: rgb(65, 224, 16);
     letter-spacing: 2px;
     font-weight: 500;
 }
+
+#meet-the-team > h3 {
+    color: var(--textcolor);
+    text-shadow: 5px 5px 6px var(--tertiarycolor);
+}
 #meet-the-team .card-title{
+    padding-top: 1.2rem;
     margin-bottom: 1rem;
     font-size: 1.5rem;
     color: white;
@@ -363,26 +374,28 @@ color: rgb(65, 224, 16);
 .teamcards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 10px;
+    grid-gap: 12px;
     margin: 0 auto;
 }
 
 .teamcards .card {
     width: 250px;
     border-radius: 10px;
-    background-color: #292b2c;
+    background-color: rgb(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 7px var(--tertiarycolor);
     margin: 0 auto;
+    overflow-x: hidden;
 }
 
  .teamcards img {
+    padding: .8rem;
+    border-radius: 20px;
     height: 250px;
-    border-radius: 25px;
     transition: transform 1s ease;
-    padding: 1rem 1rem;
 }
 
 .teamcards img:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 #socials {
@@ -397,6 +410,10 @@ color: rgb(65, 224, 16);
     height: 50px;
     width: 50px;
     margin-right: .5rem;
+    background: white;
+    border-radius: 50px;
+    background-size: 50px;
+    
 }
 
 #arrow {
@@ -410,43 +427,24 @@ color: rgb(65, 224, 16);
     align-items: center;
     justify-content: center;
     color: rgb(65, 224, 16) !important;
+    background-color: rgb(0, 0, 0, 0.1) !important;
 
 }
 
-.mint-section{
-    width: 100vw;
-    height: 100vh;
-    background-color: #292b2c;
-    background-image: url(../stellar\ saurins\ bg\ test.jpg);
-    background-size: 1600px;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.connect-wallet{
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%);
-    border-style: none;
-    background-color: rgb(65, 224, 16);
-     color: black;
-    padding: 10px;
-    margin-right: 7px;
-    border-radius: 5px;
-    text-align: center;
-    font-weight: 500;
-    transition: all .5s ease;
-}
-
-.connect-wallet:active,
-.connect-wallet:hover {
-    color: white;
-}
 
 @media (max-width: 1200px) {
      .nav-item{
         padding: 1rem;       
+    }
+    .teamcards {
+        grid-gap: 30px;
+    }
+    .teamcards .card {
+        width: 290px;
+    }
+
+    .teamcards .card img {
+        height: 290px;
     }
 
 }
@@ -461,24 +459,13 @@ color: rgb(65, 224, 16);
         position: relative;
         margin-left: -1.1rem;
     }
-}
-
-@media (min-height: 700px) {
-    #info-img-slides img {
-        height: 370px;
+    #our-story::before {
+        background-repeat: repeat-y;
     }
-}
 
-@media (min-height: 1000px) {
-
-    #info-img-slides img {
-        margin-top: 20%;
-        height: 500px;
+    #fullpage h1 {
+        font-size: 2.5rem;
     }
-    #explore {
-        bottom: 20%;
-    }
-    
 
 }
 
@@ -491,14 +478,32 @@ color: rgb(65, 224, 16);
         
     }
 
-    .offcanvas-end{
-
-        width: 20px !important;
+    #our-story .side{
+        font-size: 1rem;
     }
 
+    .timeline p {
+        font-size: 1rem;
+    }
 
+    #faq h5 {
+        font-size: 1.2rem;
+    }
+
+    #faq p {
+        font-size: 1rem;
+    }
+
+    #introduction h5 {
+        font-size: 1.2rem;
+    }
+
+    #introduction p {
+        font-size: 1rem;
+    }
 
 }
+
 @media screen and (max-width: 340px) {
     #logo {
         margin-left: -1.2rem;
@@ -509,16 +514,6 @@ color: rgb(65, 224, 16);
 
     .navbar-brand {
         font-size: 1rem;
-    }
-
-    #info-img-slides {
-        text-align: center;
-    }
-
-    #info-img-slides img {
-        width: 200px;
-        height: 350px;
-        display: inline-block;
     }
 
     #collection-sum {
@@ -552,24 +547,9 @@ color: rgb(65, 224, 16);
     }
 
     .teamcards .card {
-        width: 200px;
-        height: 400px;
-    }
-}
-/**
-    #info-img-slides img {
-        margin-top: 80px;
-        height: 250px;
+        width: 250px;
+        height: 380px;
     }
 }
 
-@media (max-width: 520px) {
-    #info-img-slides img {
-        margin-top: 70px;
-        height: 250px;
-    }
-
-
-
-} */
 
