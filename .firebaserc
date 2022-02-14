@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "stellarsyndicate-c71e3"
+  },
+  "targets": {
+    "stellarsyndicate-c71e3": {
+      "hosting": {
+        "mint": [
+          "mint-stellarsyndicate"
+        ],
+        "app": [
+          "stellarsyndicate-c71e3"
+        ]
+      }
+    }
   }
 }

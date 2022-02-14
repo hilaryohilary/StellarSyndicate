@@ -1,0 +1,73 @@
+:root {
+    --tertiarycolor:rgb(65, 224, 16);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+h3 {
+    margin-top: 5rem;
+}
+
+h3,
+ h5 {
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 7px var(--tertiarycolor);
+}
+
+h5 {
+    margin-top: 2rem;
+}
+
+#collection-template {
+    transition: 1s;
+}
+
+
+#collection-img {
+  max-width: 1000px;
+  padding: 2rem;
+  margin: 0 auto;
+
+}
+
+#collection-template img {
+    height: 50px;
+    width: 50px;
+    transition: 1s;
+    margin: -2px;
+}
+
+#collection-template img:hover {
+    filter: grayscale(100px);
+    transform: scale(1.1);
+}
+
+#traits {
+    margin: 2rem;
+}
+
+
+#table {
+    color: white;
+    max-width: 720px;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+tr {
+    transition: color .5s;
+}
+/* tr:hover {
+    color:var(--tertiarycolor);
+} */
+
+th {
+    color: var(--tertiarycolor);
+}

@@ -1,6 +1,18 @@
 {
-  "hosting": {
-    "public": "public",
+  "hosting":[{
+    "target": "app",
+    "public": "app/public",
+    "trailingSlash": false,
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+
+  },
+  {
+    "target": "mint",
+    "public": "mint/build",
     "trailingSlash": false,
     "ignore": [
       "firebase.json",
@@ -8,4 +20,5 @@
       "**/node_modules/**"
     ]
   }
+]
 }

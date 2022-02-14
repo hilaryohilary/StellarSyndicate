@@ -1,0 +1,946 @@
+:root {
+    --primarycolor: #0f0f0e;
+    --secondarycolor: #292626;
+    --tertiarycolor: rgb(65, 224, 16);
+    --textcolor: #ffffff;
+}
+
+/* Google Fonts */;
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+
+html {
+    scroll-behavior: smooth;
+  }
+
+* {
+    list-style: none;
+}
+
+.bg-dark {
+    background-color: var(--primarycolor) !important;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+app {
+    display: none;
+}
+
+#logo-animation {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    transform: all .5s ease;
+}
+
+#logo-animation img {
+    width: 270px;
+    height: 270px;
+    animation: zoom 2s infinite;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    0% {
+        transform: scale(1);
+    }
+}
+
+#logo {
+    width: 5rem;
+    height: 5rem;
+}
+
+nav {
+    letter-spacing: 2px;
+    background-color: transparent !important;
+}
+
+#navbar {
+    font-family: Little Alien, 'Open Sans', sans-serif;
+    align-items: center;
+    height: 4.9rem;
+    font-size: 1rem;
+}
+
+.navbar-brand {
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    animation: blinklink 5s ease-in-out infinite;
+}
+
+.nav-link {
+    transition: all .5s ease;
+}
+
+.nav-link:focus,
+.nav-link:hover {
+    color: var(--tertiarycolor) !important;
+}
+
+
+#mintbtn{
+    border-style: none;
+    font-family: 'Anonymous Pros', monospace;
+    font-size: larger;
+    font-weight: 900;
+    background-color: var(--tertiarycolor);
+     color: black;
+     width: 70px;
+    padding: 10px;
+    margin-right: 7px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 500;
+    transition: background-color .5s ease;
+}
+
+.nav-link.disabled {
+    background-color: rgba(65, 224, 16,.5) !important;
+}
+
+
+#mintbtn:hover {
+    color: #ffffff;
+    background-color: white;
+    transform: translate(0);
+}
+
+a {
+    transition:all .5s ease;
+}
+
+a:hover,
+a:focus {
+    transform: scale(1.05);
+}
+
+
+.dropdown-menu a{
+    font-weight: 500;
+    transform: scale(1);
+}
+
+  #fullpage::before {
+      margin-top: 2rem;
+    content: '';
+    background-image: url(../banner\ 1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+} 
+
+#fullpage {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@font-face {
+    font-family: Little Alien, 'Open Sans', sans-serif;
+    src: url(./Little\ Alien.ttf);
+}
+
+#fullpage h1 {
+    font-family: Little Alien;
+    font-size: 3rem;
+    color: var(--tertiarycolor);
+    z-index: 1;
+    text-align: center;
+    transform: translateY(4rem);
+    text-shadow: 5px 5px 5px var(--primarycolor);
+}
+
+#up {
+    opacity: 0;
+    transition: all 1s ease-in;
+    transform: translateY(6rem);
+}
+
+
+#up.active {
+    transform: translateY(3.3rem);
+    opacity: 1;
+}
+
+#jstshow {
+    opacity: 0;
+    transition: all 2s ease-in;
+}
+#jstshow.active {
+    opacity: 1;
+}
+
+
+#collection-name {
+    font-family: Little Alien, 'Open Sans', sans-serif;
+    color: var(--textcolor);
+    text-align: center;
+    padding-top: 4rem;
+    margin-bottom: 3rem;
+    animation-delay: 0.5s;
+
+}
+
+@keyframes blinklink {
+    0% {
+        text-shadow: 0px;
+    }
+
+    50% {
+        text-shadow: 3px 3px 5px var(--tertiarycolor);
+    }
+
+    100% {
+        text-shadow: 0px;
+    }
+}
+#collection-sum {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#collection-link {
+    text-decoration: none;
+}
+
+#collection-link .card .card-img-top {
+    border-radius:10px;
+    padding-bottom: .5rem;
+}
+
+#collections {
+    text-align: center;
+    padding: 1.5rem 1.7rem;
+    color: #ffffff;
+    background-color: rgb(0, 0, 0, 0.1);
+    animation: blink 3s ease-in-out infinite;
+    cursor: pointer;
+    width: 300px;
+    height: 400px;
+    margin: 1rem 1.5rem;
+    border-radius: .7rem;
+}
+
+@keyframes blink {
+    0% {
+        box-shadow: 0px;
+    }
+
+    50% {
+        box-shadow: 2px  2px 12px var(--tertiarycolor);
+    }
+
+    100% {
+        box-shadow: 0px;
+    }
+}
+
+#collections > .card-title {
+    font-weight: 500;
+    font-family: 'Anonymous Pros', monospace;
+    font-size: 1.5rem;
+    margin-bottom: -10px;
+    color: var(--tertiarycolor);
+}
+
+#collections > .card-body > .card-text {
+    font-weight: 500;
+    color: rgb(252, 252, 13);
+}
+
+#faq,
+#introduction {
+    text-align: center;
+    margin-bottom: -20px;
+}
+
+#our-story {
+    text-align: center;
+    position: relative;
+    padding: 1rem;
+}
+
+
+#joindiv {
+    font-family: 'Anonymous Pros', monospace;
+    background-color: var(--secondarycolor);
+    padding: .2rem; border-radius: 2px;
+    transform: skew(-10deg);
+    width: 150px;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 500;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    box-shadow: 5px 5px 5px rgb(0, 0, 0);
+}
+
+#joindiv:hover {
+    transition: .6s all ease-in-out;
+    box-shadow: 10px 10px 10px rgb(0, 0, 0);
+}
+#joinlink {
+    text-decoration: none;
+    color: white;
+}
+#joinlink:hover {
+    color: rgb(255, 255, 0);
+}
+
+#introduction {
+    position: relative;
+}
+
+#introduction::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    background-image: url('../images/our\ story\ \(1\).png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .8;
+    height: 100%;
+}
+
+#splexian_anatomy::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    background-image: url('../images/anatomy\ \(5\).png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+    height: 100vh;
+}
+
+#splexian_anatomy {
+    position: relative;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+
+#anatomy {
+    color: #ffffff;
+    position: relative;
+    padding-top: 3rem;
+    margin: 0 1rem;
+}
+
+#anatomy h3 {
+    font-family: Little Alien, 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#anatomy p {
+    font-size: 1.05rem;
+    max-width: 800px;
+    text-align: center;
+    font-family: 'Anonymous Pros', monospace;
+    margin: 0 auto;
+    padding: 5px;
+}
+#our-story > h3 {
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    letter-spacing: 2px;
+    position: relative;
+    text-shadow: 3px 3px 5px var(--tertiarycolor);
+    font-family: Little Alien, 'Open Sans', sans-serif;
+    font-size: 2rem;
+}
+
+#our-story p.side {
+    position: relative;
+    opacity: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: opacity 2s ease-in-out;
+    font-family: 'Anonymous Pro', monospace;
+    margin: 1rem auto;
+    max-width: 820px;
+}
+
+#our-story p.side.size {
+    max-width: 700px;
+}
+#our-story .side.active {
+    opacity: 1;
+}
+#introduction h5  {
+    font-family:'Anonymous Pro', monospace;
+    color: var(--textcolor);
+    font-size: 1.2rem; 
+    letter-spacing: 2px;
+    padding: 2rem 0;
+}
+
+#introduction p{
+    font-family:'Anonymous Pro', monospace;
+    font-size: 1.1rem;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    color: var(--textcolor);    
+}
+
+.timeline > div >h3 {
+    font-family: Little Alien, 'Open Sans', sans-serif;
+    font-size: 2rem;
+    color: white;
+}
+
+.gallery {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+
+.gallery > h3 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    letter-spacing: 2px;
+    color: #ffffff;
+    font-family: Little Alien;
+
+}
+
+
+.main-carousel {
+    margin: 2rem auto;
+    position: relative;
+}
+.carousel-cell {
+    margin: 0 auto;
+    opacity: 0.1;
+    max-width: 300px;
+    max-height: 320px;
+    overflow: hidden;
+    border-radius: 1rem !important;
+  }
+
+
+  .carousel-cell.is-selected {
+    opacity: 1;
+    animation: none;
+  }
+
+  .carousel-cell.is-selected >img:hover {
+      cursor: pointer;
+      transform: scale(1.07);
+  }
+
+  .carousel-cell img {
+    max-width: 100%;
+    margin-right: 1rem;
+    transition: 1s ease;
+  }
+
+.faq-title {
+    font-family: Little Alien, 'Open Sans', sans-serif;
+    font-size: 2rem;
+    color: var(--textcolor);
+    text-align: center;
+    margin-bottom: 3rem;
+
+}
+
+.faq_group {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    
+}
+
+.faq_group > .card {
+    font-family: 'Anonymous Pros', monospace;
+    width: 280px;
+    height: auto;
+    margin: .5rem;
+    background-color: rgb(52, 58, 64,0.2) !important;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgb(0, 0, 0, 0.6);
+    transition: height 1s ease;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.faq_group >.card.hidden-content {
+    height: 250px;
+}
+
+.faq_group > .card .card-title {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.faq_group > .card .card-text {
+    opacity: 1;
+    font-size: .9rem;
+    border-left: 2px var(--tertiarycolor) solid;
+    padding-left: .5rem;
+    text-align: left;
+    transition: opacity .3s ease;
+}
+
+.faq_group > .card .card-text.hidden {
+    opacity: 0;
+}
+
+#faq {
+    margin: 0 auto;
+}
+
+#faqicon {
+    text-align: center;
+}
+
+#faq_icon:hover {
+    background-color: rgb(0, 0, 0, 0.3) !important;
+    transition: scale 1s ease-out;
+    border-radius: 50%;
+}
+
+
+#faq_card > .dangle {
+    animation: dangle 3s ease-in-out infinite;
+}
+#faq_card > .flip {
+    animation: flip 3s ease-in-out infinite;
+}
+
+
+@keyframes dangle {
+    0% {
+        transform: translateY(1rem);
+    }
+    50% {
+        transform: translateY(-.5rem);
+    }
+
+    100% {
+        transform: translateY(1rem);
+    }
+}
+
+@keyframes flip {
+
+    50% {
+        transform: rotateY(180deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+/* summary {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #ffffff;
+    padding: 1rem;
+    outline: none;
+    border-radius: 0.25rem;
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+  }
+
+  details {
+      background-color: rgb(0, 0, 0, 0.3);
+      margin-bottom: 1rem;
+  }
+  details > summary::after {
+    position: absolute;
+    content: "+";
+    right: 20px;
+  }
+  details[open] > summary::after {
+    position: absolute;
+    content: "-";
+    right: 20px;
+  }
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+  details[open] summary ~ * {
+    animation: sweep .5s ease-in-out;
+  }
+
+  @keyframes sweep {
+    0%    {opacity: 0; margin-top: -10px}
+    100%  {opacity: 1; margin-top: 0px}
+  }
+
+  .faq__content {
+      border-left: 2px solid var(--tertiarycolor);
+      color: white;
+      padding: 1rem;
+      text-align: left;
+  } */
+
+#meet-the-team {
+    margin-top: 4rem;
+    text-align: center;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+#meet-the-team > h3 {
+    font-family: Little Alien;
+    color: var(--textcolor);
+}
+#meet-the-team .card-title{
+    font-family: 'Anonymous Pros', monospace;
+    padding-top: 1.2rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: white;
+
+}
+
+
+#meet-the-team p {
+    font-family: 'Anonymous Pros', monospace;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 5px 0;
+    color: rgb(65, 224, 16);
+}
+.teamcards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 12px;
+    margin: 0 auto;
+}
+
+.teamcards a {
+    text-decoration: none;
+}
+.teamcards .card {
+    width: 250px;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 7px rgb(0, 0, 0, 0.6);
+    margin: 1rem auto;
+    overflow-x: hidden;
+}
+
+.img-container {
+    overflow: hidden;
+}
+
+ .teamcards > img {
+    padding: .8rem;
+    border-radius: 20px;
+    transition: transform 1s linear;
+    cursor: crosshair;
+    overflow: hidden;
+    transform: scale(1);
+    height: 250px;
+}
+
+.teamcards img {
+    transition: 1s ease;
+
+}
+.teamcards img:hover {
+    transform: scale(1.1);
+}
+
+#socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem ;
+    padding-top:  3rem;
+}
+
+#socials img {
+    height: 50px;
+    width: 50px;
+    margin-right: .5rem;
+    background: white;
+    border-radius: 50px;
+    background-size: 50px;
+    
+}
+
+#arrow {
+    position: absolute;
+    right: 1rem;
+}
+
+#footer {
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(65, 224, 16) !important;
+    background-color: rgb(0, 0, 0, 0.1) !important;
+    font-family: 'Anonymous Pros', monospace;
+
+}
+
+
+@media (min-width: 1200px) {
+
+    /* header {
+        background-color: var(--primarycolor) !important;
+    }
+    .navbar {
+        background-color: transparent !important;
+    }
+
+    .offcanvas-header {
+        background-color: transparent;
+    }
+
+    .offcanvas-body {
+        background-color: transparent !important;
+    } */
+
+    #fullpage::before {
+        margin-top: 0;
+    }
+
+
+
+}
+@media (max-width: 1200px) {
+     .nav-item{
+        padding: 1rem;       
+    }
+
+
+    #splexian_anatomy::before {
+        background-image: url(../images/anatomy\ bg\ phone\ res\ \(1\).png);
+        height: 100%;
+    }
+
+    #splexian_anatomy {
+        margin-top: 1rem;
+        height: 50vh;
+    }
+    .teamcards {
+        grid-gap: 30px;
+    }
+    .teamcards .card {
+        width: 290px;
+    }
+
+    .teamcards .card img {
+        height: 290px;
+    }
+
+}
+
+@media (max-width: 1000px) {
+    #fullpage {
+        height: 100vh;
+    }
+    
+    #fullpage::before {
+        height: 100vh;   
+        background-image: url(../banner-small.png); 
+        background-size: cover;
+    }
+
+    #fullpage > h1 {
+        font-size: 2rem;
+    }
+}
+
+
+@media (max-width: 920px) {
+
+    #social-link {
+        display: none !important;
+    }
+    #introduction::before {
+        background-image: none;
+    }
+
+    #introduction {
+        margin-bottom: 0px;
+    }
+
+    #introduction h3 {
+        margin-top: 0px;
+    }
+
+    #joindiv {
+        transform: skew(0);
+        border-radius: .2rem;
+    }
+
+    #fullpage h1 {
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 768px) and (min-width: 600px) {
+
+    #fullpage::before {
+        background-image: url(../banner-mediumm.png);
+        background-size: contain;
+    }
+    .navbar-brand {
+        text-align: center;
+    }
+    
+    #logo {
+        position: relative;
+        margin-left: -1.1rem;
+    }
+
+
+    .teamcards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .teamcards .card {
+        width: 520px;
+        height: 660px;
+        margin-top: 2rem;
+    }
+
+    .teamcards .card img {
+        width: 500px;
+        height: 500px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    #fullpage::before {
+        background-image: url(../banner-ex.png);
+        background-size: cover;
+        height: 50vh;
+    }
+
+    #fullpage {
+        height: 50vh;
+    }
+    .teamcards .card {
+        width: 300px;
+        height: 400px;
+    }
+
+    .teamcards .card img {
+        width: 300px;
+        height: 300px;
+    }
+
+    #our-story p.side {
+        text-align: center;
+    }
+
+    #fullpage h1 {
+        font-size: 1.2rem;
+    }
+
+    #anatomy p {
+        font-size: 1rem;
+    }
+
+    
+}
+
+@media screen and (max-width: 375px) {
+
+    #logo {
+        margin-left: -1.2rem;
+        width: 5rem;
+        height: 4rem;
+        padding: 0;
+    }
+
+    #fullpage h1 {
+        font-size: 1.2rem;
+    }
+
+    .navbar-brand {
+        font-size: 1rem;
+    }
+
+    #collections {
+        width: 250px;
+        height: 320px;
+    }
+    .card-title h1 {
+        line-height: normal;
+        font-size: 1rem;
+    }
+
+    #our-story p.side {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+    
+    #faq {
+        text-align: center;
+    }
+
+    #faq h5 {
+        font-size: 1rem;
+        margin-left: 0;
+        padding:2rem 0;
+    }
+
+    .teamcards .card {
+        width: 300px;
+        height: 380px;
+    }
+
+    .teamcards .card img {
+        width: 300px;
+        height: 300px;
+    }
+}
+
