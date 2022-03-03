@@ -86,6 +86,7 @@ nav {
 }
 
 .nav-link {
+    color: white !important;
     transition: all .5s ease;
 }
 
@@ -151,6 +152,7 @@ a:focus {
     left: 0px;
     right: 0px;
     bottom: 0px;
+    opacity: .9;
 } 
 
 #fullpage {
@@ -168,15 +170,14 @@ a:focus {
 }
 
 #fullpage h1 {
-    font-family: Little Alien;
+    font-family: Little Alien, 'Open Sans', sans-serif;
     font-size: 3rem;
+    font-weight: 700;
     color: var(--tertiarycolor);
-    z-index: 1;
     text-align: center;
     transform: translateY(4rem);
-    text-shadow: 5px 5px 5px var(--primarycolor);
+    text-shadow: 2px 2px 0 var(--primarycolor), 2px -2px 0 var(--primarycolor), -2px 2px 0 var(--primarycolor), -2px -2px 0 var(--primarycolor), 2px 0px 0 var(--primarycolor), 0px 2px 0 var(--primarycolor), -2px 0px 0 var(--primarycolor), 0px -2px 0 var(--primarycolor);
 }
-
 #up {
     opacity: 0;
     transition: all 1s ease-in;
@@ -355,14 +356,15 @@ a:focus {
     position: relative;
     height: 100vh;
     margin: 0 auto;
+    display: block;
 }
-
 
 #anatomy {
     color: #ffffff;
     position: relative;
     padding-top: 3rem;
-    margin: 0 1rem;
+    margin: 0 2rem;
+    text-align: center;
 }
 
 #anatomy h3 {
@@ -374,12 +376,62 @@ a:focus {
 
 #anatomy p {
     font-size: 1.05rem;
-    max-width: 800px;
+    max-width: 1000px;
     text-align: center;
     font-family: 'Anonymous Pros', monospace;
-    margin: 0 auto;
     padding: 5px;
+    margin: 0 auto;
 }
+
+#genes {
+    padding: 1rem;
+    overflow-x: hidden;
+}
+
+#genes .main-carousel {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+#genes .main-carousel .carousel-cell {
+    opacity: 0.1;
+    overflow: hidden;
+}
+
+#genes .main-carousel .carousel-cell.carousel-cell.is-selected {
+    opacity: 1;
+}
+
+#genes h3{
+    font-family: Little Alien, 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--textcolor);
+}
+
+
+#features {
+    color: var(--textcolor);
+    background-color: rgb(0, 0, 0) !important;
+    font-family: Little Alien;
+}
+
+#features .card-title {
+    color: var(--tertiarycolor);
+    font-size: 1.1rem;
+}
+
+#features .card-text {
+    padding-bottom: .5rem;
+    font-size: .9rem;
+}
+
+#features img{
+    height: 200px;
+    padding: .2rem;
+    border-radius: .5rem;
+}
+
 #our-story > h3 {
     margin-bottom: 1rem;
     margin-top: 2rem;
@@ -423,6 +475,7 @@ a:focus {
 }
 
 .timeline > div >h3 {
+    padding-top: 3rem;
     font-family: Little Alien, 'Open Sans', sans-serif;
     font-size: 2rem;
     color: white;
@@ -444,17 +497,17 @@ a:focus {
 }
 
 
-.main-carousel {
+.gallery .main-carousel {
     margin: 2rem auto;
     position: relative;
 }
-.carousel-cell {
+.gallery .carousel-cell {
     margin: 0 auto;
     opacity: 0.1;
     max-width: 300px;
     max-height: 320px;
     overflow: hidden;
-    border-radius: 1rem !important;
+    border-radius: 0.5rem !important;
   }
 
 
@@ -634,10 +687,10 @@ a:focus {
     color: var(--textcolor);
 }
 #meet-the-team .card-title{
-    font-family: 'Anonymous Pros', monospace;
+    font-family: Little Alien;
     padding-top: 1.2rem;
     margin-bottom: 1rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: white;
 
 }
@@ -699,14 +752,12 @@ a:focus {
     padding-top:  3rem;
 }
 
-#socials img {
-    height: 50px;
-    width: 50px;
-    margin-right: .5rem;
-    background: white;
-    border-radius: 50px;
-    background-size: 50px;
-    
+#socials a {
+    color: var(--textcolor) !important;
+}
+
+#socials i {
+    margin-right: 1.5rem;
 }
 
 #arrow {
@@ -779,19 +830,29 @@ a:focus {
 }
 
 @media (max-width: 1000px) {
+
+    #nav-socials {
+        gap: 20px !important;
+    }
+
+    #nav-socials > a > i {
+        font-size: x-large;
+    }
+
     #fullpage {
         height: 100vh;
     }
     
     #fullpage::before {
         height: 100vh;   
-        background-image: url(../banner-small.png); 
+        background-image: url(../banner-long.png); 
         background-size: cover;
     }
 
     #fullpage > h1 {
         font-size: 2rem;
     }
+
 }
 
 
@@ -825,7 +886,12 @@ a:focus {
 
     #fullpage::before {
         background-image: url(../banner-mediumm.png);
-        background-size: contain;
+        background-size: cover;
+        height: 50vh;
+    }
+
+    #fullpage {
+        height: 50vh;
     }
     .navbar-brand {
         text-align: center;
@@ -859,7 +925,7 @@ a:focus {
 @media (max-width: 600px) {
 
     #fullpage::before {
-        background-image: url(../banner-ex.png);
+        background-image: url(../banner-small.png);
         background-size: cover;
         height: 50vh;
     }
@@ -891,6 +957,13 @@ a:focus {
 
     
 }
+
+@media screen and (max-width: 450px) {
+    .offcanvas-end {
+        width: 300px !important;
+    }
+}
+
 
 @media screen and (max-width: 375px) {
 
@@ -935,7 +1008,7 @@ a:focus {
 
     .teamcards .card {
         width: 300px;
-        height: 380px;
+        height: 420px;
     }
 
     .teamcards .card img {
