@@ -398,6 +398,7 @@ a:focus {
 }
 
 #genes .main-carousel .carousel-cell.carousel-cell.is-selected {
+    transition: opacity 1s ease;
     opacity: 1;
 }
 
@@ -512,8 +513,8 @@ a:focus {
 
 
   .carousel-cell.is-selected {
+    transition: opacity 1s ease;
     opacity: 1;
-    animation: none;
   }
 
   .carousel-cell.is-selected >img:hover {
