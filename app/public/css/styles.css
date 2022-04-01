@@ -77,6 +77,7 @@ nav {
     align-items: center;
     height: 4.9rem;
     font-size: 1rem;
+    border-bottom: 1px rgba(0,0,0, .5) solid;
 }
 
 .navbar-brand {
@@ -118,9 +119,28 @@ nav {
 
 
 #mintbtn:hover {
-    color: #ffffff;
-    background-color: white;
+    color: #ffffff !important;
+    background-color: var(--tertiarycolor);
     transform: translate(0);
+}
+
+#mintbtn:focus {
+    color: var(--textcolor) !important;
+}
+
+
+.modal-header {
+    border-bottom: none ;
+}
+
+.modal-content {
+    background-color: var(--primarycolor);
+    color: var(--textcolor);
+    font-family: Little Alien;
+}
+
+.modal-header .btn-close {
+    color: white !important;
 }
 
 a {
@@ -141,7 +161,7 @@ a:focus {
   #fullpage::before {
       margin-top: 2rem;
     content: '';
-    background-image: url(../banner\ 1.png);
+    background-image: url(../site.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -152,7 +172,7 @@ a:focus {
     left: 0px;
     right: 0px;
     bottom: 0px;
-    opacity: .9;
+    opacity: .8;
 } 
 
 #fullpage {
@@ -169,16 +189,26 @@ a:focus {
     src: url(./Little\ Alien.ttf);
 }
 
+@font-face {
+    font-family: Bassline Inline;
+    src: url(./Bassline\ Inline.ttf);
+}
+
+@font-face {
+    font-family: Kestila-Demo;
+    src: url(./Kestila-Demo.ttf);
+}
+
 #fullpage h1 {
-    font-family: Little Alien, 'Open Sans', sans-serif;
-    font-size: 3rem;
+    font-size: 5.5rem;
     font-weight: 700;
-    color: var(--tertiarycolor);
+    color: #3cff00;
     text-align: center;
-    transform: translateY(4rem);
+    transform: translateY(1.5rem);
     text-shadow: 2px 2px 0 var(--primarycolor), 2px -2px 0 var(--primarycolor), -2px 2px 0 var(--primarycolor), -2px -2px 0 var(--primarycolor), 2px 0px 0 var(--primarycolor), 0px 2px 0 var(--primarycolor), -2px 0px 0 var(--primarycolor), 0px -2px 0 var(--primarycolor);
 }
 #up {
+    font-family: Bassline Inline, 'Open Sans', sans-serif;
     opacity: 0;
     transition: all 1s ease-in;
     transform: translateY(6rem);
@@ -186,13 +216,18 @@ a:focus {
 
 
 #up.active {
-    transform: translateY(3.3rem);
+    transform: translateY(1rem);
     opacity: 1;
 }
 
+#up.up2 {
+    transition: all .5s ease-in;
+    font-size: 3rem;
+}
 #jstshow {
     opacity: 0;
     transition: all 2s ease-in;
+    font-family: Kestila-Demo;
 }
 #jstshow.active {
     opacity: 1;
@@ -204,7 +239,7 @@ a:focus {
     color: var(--textcolor);
     text-align: center;
     padding-top: 4rem;
-    margin-bottom: 3rem;
+    margin: 4rem;
     animation-delay: 0.5s;
 
 }
@@ -235,8 +270,9 @@ a:focus {
 }
 
 #collection-link .card .card-img-top {
+    width: 250px !important;
     border-radius:10px;
-    padding-bottom: .5rem;
+    margin-bottom: .5rem;
 }
 
 #collections {
@@ -288,7 +324,7 @@ a:focus {
 #our-story {
     text-align: center;
     position: relative;
-    padding: 1rem;
+    padding: .5rem;
 }
 
 
@@ -318,6 +354,7 @@ a:focus {
 }
 
 #introduction {
+    margin-top: 3rem;
     position: relative;
 }
 
@@ -344,7 +381,7 @@ a:focus {
     left: 0px;
     bottom: 0px;
     width: 100%;
-    background-image: url('../images/anatomy\ \(5\).png');
+    background-image: url('../images/anatomybg.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -359,11 +396,15 @@ a:focus {
     display: block;
 }
 
+#anatomy-section {
+    margin: 1rem 0;
+}
+
 #anatomy {
     color: #ffffff;
     position: relative;
     padding-top: 3rem;
-    margin: 0 2rem;
+    margin: 0 1rem;
     text-align: center;
 }
 
@@ -371,7 +412,7 @@ a:focus {
     font-family: Little Alien, 'Open Sans', sans-serif;
     text-align: center;
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
 }
 
 #anatomy p {
@@ -386,6 +427,7 @@ a:focus {
 #genes {
     padding: 1rem;
     overflow-x: hidden;
+    margin-top: 3rem;
 }
 
 #genes .main-carousel {
@@ -395,10 +437,11 @@ a:focus {
 #genes .main-carousel .carousel-cell {
     opacity: 0.1;
     overflow: hidden;
+    max-width: 250px;
 }
 
 #genes .main-carousel .carousel-cell.carousel-cell.is-selected {
-    transition: opacity 1s ease;
+    transition: opacity .7s ease;
     opacity: 1;
 }
 
@@ -406,7 +449,7 @@ a:focus {
     font-family: Little Alien, 'Open Sans', sans-serif;
     text-align: center;
     font-size: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     color: var(--textcolor);
 }
 
@@ -419,19 +462,20 @@ a:focus {
 
 #features .card-title {
     color: var(--tertiarycolor);
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 #features .card-text {
     padding-bottom: .5rem;
-    font-size: .9rem;
+    font-size: 1rem;
 }
 
 #features img{
-    height: 200px;
+    height: 250px;
     padding: .2rem;
     border-radius: .5rem;
 }
+
 
 #our-story > h3 {
     margin-bottom: 1rem;
@@ -476,21 +520,21 @@ a:focus {
 }
 
 .timeline > div >h3 {
-    padding-top: 3rem;
+    margin: 4rem 0;
     font-family: Little Alien, 'Open Sans', sans-serif;
     font-size: 2rem;
     color: white;
 }
 
 .gallery {
-    margin-top: 2rem;
+    margin-top: 5rem;
     margin-bottom: 5rem;
 }
 
 .gallery > h3 {
     font-size: 2rem;
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
     letter-spacing: 2px;
     color: #ffffff;
     font-family: Little Alien;
@@ -533,7 +577,7 @@ a:focus {
     font-size: 2rem;
     color: var(--textcolor);
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 
 }
 
@@ -584,7 +628,7 @@ a:focus {
 }
 
 #faq {
-    margin: 0 auto;
+    margin: 4rem auto;
 }
 
 #faqicon {
@@ -676,7 +720,7 @@ a:focus {
   } */
 
 #meet-the-team {
-    margin-top: 4rem;
+    margin-top: 5rem;
     text-align: center;
     font-size: 1.4rem;
     letter-spacing: 2px;
@@ -686,6 +730,7 @@ a:focus {
 #meet-the-team > h3 {
     font-family: Little Alien;
     color: var(--textcolor);
+    margin-bottom: 4rem;
 }
 #meet-the-team .card-title{
     font-family: Little Alien;
@@ -702,7 +747,7 @@ a:focus {
     font-size: .8rem;
     font-weight: 700;
     margin: 5px 0;
-    color: rgb(65, 224, 16);
+    color: rgba(65, 224, 16, .8);
 }
 .teamcards {
     display: grid;
@@ -771,9 +816,9 @@ a:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgb(65, 224, 16) !important;
+    color: rgba(65, 224, 16, .8) !important;
     background-color: rgb(0, 0, 0, 0.1) !important;
-    font-family: 'Anonymous Pros', monospace;
+    font-family: Little Alien;
 
 }
 
@@ -807,16 +852,6 @@ a:focus {
         padding: 1rem;       
     }
 
-
-    #splexian_anatomy::before {
-        background-image: url(../images/anatomy\ bg\ phone\ res\ \(1\).png);
-        height: 100%;
-    }
-
-    #splexian_anatomy {
-        margin-top: 1rem;
-        height: 50vh;
-    }
     .teamcards {
         grid-gap: 30px;
     }
@@ -832,6 +867,16 @@ a:focus {
 
 @media (max-width: 1000px) {
 
+    #splexian_anatomy::before {
+        height: 100%;
+        background-image: url(../images/anatomybgphone.png);
+    }
+
+    #splexian_anatomy {
+        margin-bottom: 3rem;
+        height: 500px;
+    }
+    
     #nav-socials {
         gap: 20px !important;
     }
@@ -841,17 +886,12 @@ a:focus {
     }
 
     #fullpage {
-        height: 100vh;
+        height: 50vh;
     }
     
     #fullpage::before {
-        height: 100vh;   
-        background-image: url(../banner-long.png); 
+        height: 50vh;
         background-size: cover;
-    }
-
-    #fullpage > h1 {
-        font-size: 2rem;
     }
 
 }
@@ -879,20 +919,25 @@ a:focus {
         border-radius: .2rem;
     }
 
-    #fullpage h1 {
-        font-size: 1.5rem;
-    }
 }
 @media (max-width: 768px) and (min-width: 600px) {
 
     #fullpage::before {
-        background-image: url(../banner-mediumm.png);
+        /* background-image: url(../banner-mediumm.png); */
         background-size: cover;
         height: 50vh;
     }
 
     #fullpage {
         height: 50vh;
+    }
+
+    #fullpage h1 {
+        font-size: 4rem;
+    }
+
+    #up.up2 {
+        font-size: 3rem;
     }
     .navbar-brand {
         text-align: center;
@@ -926,7 +971,6 @@ a:focus {
 @media (max-width: 600px) {
 
     #fullpage::before {
-        background-image: url(../banner-small.png);
         background-size: cover;
         height: 50vh;
     }
@@ -949,9 +993,17 @@ a:focus {
     }
 
     #fullpage h1 {
-        font-size: 1.2rem;
+        font-size: 2.5rem;
+        transform: translateY(2.5rem);
     }
 
+    #up.active {
+        transform: translateY(2.5rem);
+    }
+
+    #up.up2 {
+        font-size: 2rem;
+    }
     #anatomy p {
         font-size: 1rem;
     }
@@ -960,6 +1012,11 @@ a:focus {
 }
 
 @media screen and (max-width: 450px) {
+
+    #splexian_anatomy {
+        height: 400px;
+    }
+    
     .offcanvas-end {
         width: 300px !important;
     }
@@ -976,17 +1033,29 @@ a:focus {
     }
 
     #fullpage h1 {
-        font-size: 1.2rem;
+        transform: translateY(3rem);
+        font-size: 2rem;
+    }
+    #up.active {
+        transform: translateY(3rem);
     }
 
+    #up.up2 {
+        font-size: 1.5rem;
+    }
     .navbar-brand {
         font-size: 1rem;
     }
 
     #collections {
         width: 250px;
-        height: 320px;
+        height: 350px;
     }
+
+    #collection-link .card .card-img-top {
+        width: 200px !important;
+    }
+    
     .card-title h1 {
         line-height: normal;
         font-size: 1rem;
@@ -997,6 +1066,10 @@ a:focus {
         font-weight: 500;
     }
     
+    #splexian_anatomy {
+        max-height: 350px;
+    }
+
     #faq {
         text-align: center;
     }

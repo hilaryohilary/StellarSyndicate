@@ -1,10 +1,12 @@
-const up = document.querySelector('#up');
+const up = document.querySelectorAll('#up');
 const jstshow = document.querySelector('#jstshow');
 
 
 function animate() {
-    up.classList.add('active');
-    jstshow.classList.add('active');
+    up.forEach(h1 =>{
+        h1.classList.add('active');
+        jstshow.classList.add('active');
+    } );
 }
 
 
